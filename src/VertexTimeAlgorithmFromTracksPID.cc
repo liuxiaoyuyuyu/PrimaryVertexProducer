@@ -96,7 +96,7 @@ bool VertexTimeAlgorithmFromTracksPID::vertexTime(float& vtxTime,
 
   auto const vtxTime_init = vtxTime;
   auto const vtxTimeError_init = vtxTimeError;
-  const int max_steps=15000;//todo:maybe add protection max_step<(3^Ntrk-populationSize_)
+  const int max_steps=1500;//todo:maybe add protection max_step<(3^Ntrk-populationSize_)
 
   //TRandom3 mRan(123);//fix the random seed
   
