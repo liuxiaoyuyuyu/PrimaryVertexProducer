@@ -151,6 +151,7 @@ bool VertexTimeAlgorithmFromTracksPID::vertexTime(float& vtxTime,
         trkInfo.weight[0]=trkWeight / (trkInfo.trkTimeErrorHyp[0] * trkInfo.trkTimeErrorHyp[0]);
         trkInfo.weight[1]=trkWeight / (trkInfo.trkTimeErrorHyp[1] * trkInfo.trkTimeErrorHyp[1]);
         trkInfo.weight[2]=trkWeight / (trkInfo.trkTimeErrorHyp[2] * trkInfo.trkTimeErrorHyp[2]);
+        /*
         LOG << "vertexTimeFromTracks:     track"
             << " pt=" << trk.track().pt() << " eta=" << trk.track().eta() << " phi=" << trk.track().phi()
             << " vtxWeight=" << trkWeight << " time=" << trkTime << " timeError=" << trkTimeError
@@ -158,6 +159,7 @@ bool VertexTimeAlgorithmFromTracksPID::vertexTime(float& vtxTime,
             << trkInfo.trkTimeErrorHyp[0] << " timeHyp[kaon]=" << trkInfo.trkTimeHyp[1] << " +/- "
             << trkInfo.trkTimeErrorHyp[1] << " timeHyp[proton]=" << trkInfo.trkTimeHyp[2] << " +/- "
             << trkInfo.trkTimeErrorHyp[2];
+        */
       }
     }
   }//End looping over tracks
@@ -167,7 +169,7 @@ bool VertexTimeAlgorithmFromTracksPID::vertexTime(float& vtxTime,
   
   //Add protection for population<=Nm^Ntrks, where Nm is the possible number of particle spieces.
   if(populationSize_>=pow(3,Ntrks)){
-    LOG <<"Population size larger than Nm_^(Ntrks)";
+    //LOG <<"Population size larger than Nm_^(Ntrks)";
     vtxTime = vtxTime_init;
     vtxTimeError = vtxTimeError_init;
     //cout<<"vz="<<vtx.position().z()<<" Ntrk="<<Ntrks<<" ndof="<<tmp_ndof<<" vtxTime="<<vtxTime<<" vtxTimeError="<<vtxTimeError<<endl;
@@ -403,8 +405,10 @@ bool VertexTimeAlgorithmFromTracksPID::vertexTime(float& vtxTime,
       cout<<popindex_chi2_pairs[i].first<<" "<<popindex_chi2_pairs[i].second<<endl;
     }
     */
+    /*
     LOG <<"Ntrks="<<Ntrks<<" chi2_min="<<population_chi2[popindex_chi2min]<<" Nsteps="<<nstep
     <<" vertex_time="<<vtxTime<<" vertex_time_error="<<vtxTimeError;
+    */
     //cout<<Ntrks<<" "<<population_chi2[popindex_chi2min]<<" "<<vtx.position().z()<<endl;
     //cout<<tmp_ndof<<" "<<population_chi2[popindex_chi2min]<<" "<<vtx.position().z()<<endl;
     //cout<<"vz="<<vtx.position().z()<<" Ntrk="<<Ntrks<<" ndof="<<tmp_ndof<<" chi2="<<population_chi2[popindex_chi2min]<<endl;
