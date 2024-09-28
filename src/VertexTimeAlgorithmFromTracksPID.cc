@@ -393,7 +393,7 @@ bool VertexTimeAlgorithmFromTracksPID::vertexTime(float& vtxTime,
         cout<<" chi2="<<popindex_chi2_pairs[i].second<<endl;
       }
       */
-      LOG << "vertexTimeFromTracks:   iteration=" << nstep <<" chi2_min/Ntrk="<<popindex_chi2_pairs[0].second/(double)Ntrks;
+      //LOG << "vertexTimeFromTracks:   iteration=" << nstep <<" chi2_min/Ntrk="<<popindex_chi2_pairs[0].second/(double)Ntrks;
       //nstep++;
     }//=== Iteration ends===
      
@@ -412,7 +412,7 @@ bool VertexTimeAlgorithmFromTracksPID::vertexTime(float& vtxTime,
     //cout<<Ntrks<<" "<<population_chi2[popindex_chi2min]<<" "<<vtx.position().z()<<endl;
     //cout<<tmp_ndof<<" "<<population_chi2[popindex_chi2min]<<" "<<vtx.position().z()<<endl;
     //cout<<"vz="<<vtx.position().z()<<" Ntrk="<<Ntrks<<" ndof="<<tmp_ndof<<" chi2="<<population_chi2[popindex_chi2min]<<endl;
-    //cout<<vtx.position().z()<<" "<<Ntrks<<" "<<tmp_ndof<<" "<<population_chi2[popindex_chi2min]<<endl;
+    cout<<vtx.position().z()<<" "<<Ntrks<<" "<<tmp_ndof<<" "<<population_chi2[popindex_chi2min]<<endl;
     //ref e.g:https://github.com/cms-sw/cmssw/blob/master/Configuration/Skimming/src/LeptonSkimming.cc
 
     return true;  
