@@ -36,7 +36,7 @@ VertexTimeAlgorithmFromTracksPID::VertexTimeAlgorithmFromTracksPID(edm::Paramete
       probProton_(iConfig.getParameter<double>("probProton")),
       Tstart_(iConfig.getParameter<double>("Tstart")),
       coolingFactor_(iConfig.getParameter<double>("coolingFactor")),
-      populationSize_(15),
+      populationSize_(45),
       Nm_(3){}
       
 
@@ -393,7 +393,7 @@ bool VertexTimeAlgorithmFromTracksPID::vertexTime(float& vtxTime,
         cout<<" chi2="<<popindex_chi2_pairs[i].second<<endl;
       }
       */
-      //LOG << "vertexTimeFromTracks:   iteration=" << nstep <<" chi2_min/Ntrk="<<popindex_chi2_pairs[0].second/(double)Ntrks;
+      LOG << "vertexTimeFromTracks:   iteration=" << nstep <<" chi2_min/Ntrk="<<popindex_chi2_pairs[0].second/(double)Ntrks;
       //nstep++;
     }//=== Iteration ends===
      
